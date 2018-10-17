@@ -12,7 +12,6 @@
  *
  *= require_tree .
  *= require_self
- *= require font-awesome
  */
 
 * {
@@ -22,6 +21,17 @@
  .card {
     padding: 20px;
     margin: 20px 0;
-    box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2);
     border-radius: 4px;
+}
+
+.btn {
+    padding: 10px;
+    min-width: 100px;
+    min-height: 10px;
+    border-radius: 500px;
+    background-color: #4286f4;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.2);
 }
