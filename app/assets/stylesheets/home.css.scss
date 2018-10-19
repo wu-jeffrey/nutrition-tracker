@@ -12,5 +12,16 @@
     .summary, .add, .tally {
         width: 100%;
     }
+
+    .add {
+        position: relative;
+    }
+
+    #hungry {
+        display: block;
+        height: 75px;
+        width: 75px;
+        margin: 0 auto;
+    }
 }
 

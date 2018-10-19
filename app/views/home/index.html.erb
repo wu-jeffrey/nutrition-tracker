@@ -1,14 +1,29 @@
 <section id="home">
-    <h1>Trackit</h1>
+    <%# <h1>Goals</h1> %>
     <div class="card summary">
         charts here
     </div>
 
+    <%# <h1>Add Food</h1> %>
     <div class="card add">
-        form here
+        <%= render 'foods/form'%>
     </div>
 
-    <div class="card tally">
-        list here
+    <%# <h1>Summary</h1> %>
+    <% if no_food?(@foods) %>
+        <div class="card tally">
+            <p class="text-centered">No Foods Logged!</p>
+            <%= image_tag 'hungry.gif', :id => 'hungry' %>
+        </div>
+    <% end %>
+        <% @foods.each do |food| %>
+            <div class="card tally">
+                <td><%= food.name %></td>
+                <td><%= food.cal %></td>
+                <td><%= food.protein %></td>
+                <td><%= food.carbohydrates %></td>
+                <td><%= food.fat %></td>
+            </div>
+        <% end %>
     </div>
 </section>
