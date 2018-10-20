@@ -7,24 +7,24 @@
     </div>
     <div class="input">
       <%= form.label :calories %><br>
-      <%= form.number_field :cal, min: '0'  %>
+      <%= form.number_field :cal, min: '0', value: '0', onClick: 'this.select();'  %>
     </div>
   </div>
 
   <div class="row macros">
     <div class="input">
       <%= form.label :protein %><br>
-      <%= form.number_field :protein, min: '0', max: '999'  %>
+      <%= form.number_field :protein, min: '0', max: '999', value: '0', onClick: 'this.select();' %>
     </div>
 
     <div class="input">
       <%= form.label :carbs %><br>
-      <%= form.number_field :carbohydrates, min: '0', max: '999' %>
+      <%= form.number_field :carbohydrates, min: '0', max: '999', value: '0', onClick: 'this.select();' %>
     </div>
 
     <div class="input">
       <%= form.label :fats %><br>
-      <%= form.number_field :fat, min: '0', max: '999'  %>
+      <%= form.number_field :fat, min: '0', max: '999', value: '0', onClick: 'this.select();' %>
     </div>
 
     

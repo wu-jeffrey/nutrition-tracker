@@ -22,7 +22,7 @@ form {
     input {
         text-align: center;
         border: none;
-        border-radius: 15px;
+        border-radius: 150px;
         background-color: #e8e8e8;
         transition: box-shadow 0.3s ease-in-out;
     }
@@ -54,6 +54,7 @@ form {
 
     #save-btn:hover, #save-btn:focus {
         box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.4);
+        cursor: pointer;
     }
     // Remove arrows on number input
     input[type=number]::-webkit-inner-spin-button, 

@@ -13,14 +13,18 @@
  *= require_tree .
  *= require_self
  */
- @import url('https://fonts.googleapis.com/css?family=Roboto');
+ /* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
 
 * {
     color: #212121;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     --clr-primary: #6200EE;
     --clr-primary-400: #9449ff;
     --clr-secondary: #03DAC5;
+}
+
+body {
+    background-color: #f7f7f7;
 }
 
  .card {
@@ -28,6 +32,16 @@
     margin: 20px 0;
     box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2);
     border-radius: 4px;
+    width: 100%;
+}
+
+.card-header {
+    margin: -20px -20px 10px -20px;
+    padding: 15px;
+    color: white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: var(--clr-primary);
 }
 
 .btn {
