@@ -28,7 +28,7 @@ body {
 }
 
  .card {
-    padding: 20px;
+    padding: 20px; /* padding 'linked' to (-) margin of .card-header */
     margin: 20px 0;
     box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2);
     border-radius: 4px;
@@ -38,7 +38,7 @@ body {
 .card-header {
     margin: -20px -20px 10px -20px;
     padding: 15px;
-    color: white;
+    color: var(--clr-primary);
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     background-color: var(--clr-primary);
@@ -57,4 +57,8 @@ body {
 
 .text-centered {
     text-align: center;
+}
+
+.spacer {
+    height: 10px;
 }

@@ -1,11 +1,17 @@
 <section id="home">
     <div class="card summary">
-        charts here
+        <div class="card-header">
+            <div class="spacer"></div>
+            
+        </div>
+
     </div>
 
     <div class="card add">
         <%= render 'foods/form'%>
     </div>
+
+    <div class="spacer"></div>
 
     <div class="list">
         <% if no_food?(@foods) %>
