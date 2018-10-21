@@ -22,11 +22,11 @@
             <table>
                 <tr>
                     <th></th>
-                    <th>Calories</th>
+                    <th>Cal</th>
                     <th>Protein</th>
-                    <th>Carbs</th>
+                    <th>Carb</th>
                     <th>Fats</th>
-                </tr>
+                </tr>   
                 <tr class="spacer"></tr>
             <% @foods.each do |food| %>
                 <tr class="card">
@@ -35,6 +35,7 @@
                     <td><%= food.protein %> g</td>
                     <td><%= food.carbohydrates %> g</td>
                     <td><%= food.fat %> g</td>
+                    <td class="delete-btn"><%= button_to "Delete", food_path(id: food.id), method: :delete %></td>
                 </tr>
                 <tr class="spacer"></tr>
             <% end %>

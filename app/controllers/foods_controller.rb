@@ -6,7 +6,13 @@ class FoodsController < ApplicationController
     def create
         @food = Food.new(food_params)
         @food.save
-        redirect_to '/'
+        redirect_to :root
+    end
+
+    def destroy
+        @article = Food.find(params[:id])
+        @article.destroy
+        redirect_to :root
     end
 
     private
