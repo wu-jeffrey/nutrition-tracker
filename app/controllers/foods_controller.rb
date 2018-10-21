@@ -10,8 +10,8 @@ class FoodsController < ApplicationController
     end
 
     def destroy
-        @article = Food.find(params[:id])
-        @article.destroy
+        @food = Food.find(params[:id])
+        @food.destroy
         redirect_to :root
     end
 
