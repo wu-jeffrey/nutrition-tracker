@@ -31,14 +31,9 @@
             text-align: center;
         }
 
-        td.delete-btn {
+        td.delete {
             input {
-                text-align: center;
-                height: 30px;
-                width: 60px;
-                border-radius: 150px;
                 background-color: #ff6961;
-                color: white;
             }
 
             input:hover {

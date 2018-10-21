@@ -37,7 +37,7 @@
                     <td><%= food.protein %> g</td>
                     <td><%= food.carbohydrates %> g</td>
                     <td><%= food.fat %> g</td>
-                    <td class="delete-btn"><%= button_to "Delete", food_path(id: food.id), method: :delete %></td>
+                    <td class="delete"><%= button_to "Delete", food_path(id: food.id), method: :delete, class: 'btn' %></td>
                 </tr>
                 <tr class="spacer"></tr>
             <% end %>
