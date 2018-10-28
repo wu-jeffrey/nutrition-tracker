@@ -12,7 +12,6 @@
 
 /* Containers */
 .card {
-    color: var(--clr-text);
     padding: 20px; /* keep this the same as (-) margin of .card-header */
     margin: 20px 0;
     box-shadow: 0 9px 18px rgba(0,0,0,0.30);
@@ -68,12 +67,74 @@
     border: none;
 }
 
-input:not([type='checkbox']) {
+input:not([type=checkbox]) {
     text-align: center;
     height: 35px;
     font-size: 1rem;
     border-radius: 500px;
 }
+
+/* slider */
+    .switch {
+        position: relative;
+        display: flex;
+        width: 42px;
+        height: 23px;
+        margin: 10px 0px 10px 75px
+    }
+
+    input[type=checkbox] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 150px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 100%;
+      }
+
+      input:checked + .slider {
+        background-color: var(--clr-red);
+      }
+      
+      input:focus + .slider {
+        box-shadow: 0 0 1px var(--clr-red);
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(18px);
+        -ms-transform: translateX(18px);
+        transform: translateX(18px);
+      }
+
+      .switch .label {
+          line-height: 23px;
+          display: inline;
+          min-width: 110px;
+          margin-left: 50px;
+      }
 
 input:focus, textarea:focus { /* gets rid of blue outline on input elements */
     outline: none;

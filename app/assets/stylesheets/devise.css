@@ -7,6 +7,8 @@ body.devise {
 }
 
 .view-container {
+    text-align: center;
+    color: white;
     display: flex;
     flex-direction: column;
     max-width: 320px;
@@ -24,7 +26,7 @@ form.sign-in {
     border: none;
 }
 
-.view-container input[type='submit'] {
+.view-container input[type=submit] {
     background-color: var(--clr-red);
     color: white;
     cursor: pointer;

@@ -1,17 +1,20 @@
-<h2 class="clr-white">SIGN IN</h2>
+<h2>SIGN IN</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), method: 'POST', :html=>{:class=> "sign-in"}) do |f| %>
   
   <%= f.email_field :email, autofocus: true, placeholder: 'Email' %>
   <br />
 
-  
   <%= f.password_field :password, autocomplete: "off", placeholder: 'Password' %>
 
-  <%= f.submit "Sign in", :method => :POST %>
-  
   <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <label class="switch">
+      <%= f.check_box :remember_me %>
+      <span class="slider"></span>
+      <span class="label">Remember me</span>
+    </label>
   <% end -%>
+
+  <%= f.submit "Sign in", :method => :POST %>
 
 <% end %>
