@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%= stylesheet_link_tag 'devise', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'shared', 'data-turbolinks-track' => true %>
+</head>
+
+  <body class="devise">
+    <div class="card view-container">
+      <%= yield %>
+    </div>
+    <div class="">
+    <%= render "devise/shared/links" %>
+    <div class="notice">
+      <%= notice %> <span class="close-btn">✕</span>
+    </div>
+    <div class="alert">
+      <%= alert %> <span class="close-btn">✕</span>
+    </div>
+  </body>
+
+</html>

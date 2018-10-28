@@ -1,34 +1,29 @@
-<%= form_for :food, url: {action: 'create', controller: 'foods'}, html: { autocomplete: "off" } do |form| %>
+<%= form_for :food, url: {action: 'create', controller: 'foods'}, :html=>{:class=> "food"} do |form| %>
 
   <div class="row">
     <div class="input">
-      <%= form.label :name %><br>
-      <%= form.text_field :name %>
+      <%= form.text_field :name, placeholder: 'Name', autocomplete: 'off' %>
     </div>
     <div class="input">
-      <%= form.label :calories %><br>
-      <%= form.number_field :cal, min: '0', value: '0', onClick: 'this.select();'  %>
+      <%= form.number_field :cal, min: '0', placeholder: 'Calories' %>
     </div>
   </div>
 
-  <div class="row macros">
+  <div class="row">
     <div class="input">
-      <%= form.label :protein %><br>
-      <%= form.number_field :protein, min: '0', max: '999', value: '0', onClick: 'this.select();' %>
+      <%= form.number_field :protein, min: '0', max: '999', placeholder: 'Protein' %>
     </div>
 
     <div class="input">
-      <%= form.label :carbs %><br>
-      <%= form.number_field :carbohydrates, min: '0', max: '999', value: '0', onClick: 'this.select();' %>
+      <%= form.number_field :carbohydrates, min: '0', max: '999', placeholder: 'Carbs' %>
     </div>
 
     <div class="input">
-      <%= form.label :fats %><br>
-      <%= form.number_field :fat, min: '0', max: '999', value: '0', onClick: 'this.select();' %>
+      <%= form.number_field :fat, min: '0', max: '999', placeholder: 'Fats'  %>
     </div>
 
     
   </div>
-  <%= form.submit :+, id: 'save-btn' %> 
+  <%= form.submit :+, id: 'save-btn', class: 'btn-circle' %> 
   
 <% end %>

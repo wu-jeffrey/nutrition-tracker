@@ -1,15 +1,21 @@
 <section id="home">
     <div class="card summary">
         <div class="card-header">
-            Protein <%= total_protein(@foods) %> g
-            Carbohydrates <%= total_carbohydrates(@foods) %> g
-            Fats <%= total_fat(@foods) %> g
+            <span>Protein <%= total_protein(@foods) %> g</span>
+            <span>Carbohydrates <%= total_carbohydrates(@foods) %> g</span>
+            <span>Fats <%= total_fat(@foods) %> g</span>
         </div>
         <div class="spacer"></div>
-        Calories <%= total_calories(@foods) %> cal
+        <div class="card-body">
+            <span>Calories <%= total_calories(@foods) %> cal</span>
+            <span>Calories Left <%= calories_left(@foods, 2400) %> cal</span>
+        </div>
     </div>
 
     <div class="card add">
+        <div class="card-header">
+        </div>
+        <div class="spacer"></div>
         <%= render 'foods/form'%>
     </div>
 
@@ -24,23 +30,25 @@
             <table>
                 <tr>
                     <th></th>
-                    <th>Cal</th>
-                    <th>Protein</th>
-                    <th>Carb</th>
-                    <th>Fats</th>
+                    <th style="width: 90px">Cal</th>
+                    <th style="width: 90px">Protein</th>
+                    <th style="width: 90px">Carb</th>
+                    <th style="width: 90px">Fats</th>
+                    <th></th>
                 </tr>   
                 <tr class="spacer"></tr>
             <% @foods.each do |food| %>
-                <tr class="card">
-                    <td><%= food.name %></td>
+                <tr class="food-chip">
+                    <td><%= titleize(food.name) %></td>
                     <td><%= food.cal %> cal</td>
                     <td><%= food.protein %> g</td>
                     <td><%= food.carbohydrates %> g</td>
                     <td><%= food.fat %> g</td>
-                    <td class="delete"><%= button_to "Delete", food_path(id: food.id), method: :delete, class: 'btn' %></td>
+                    <td class="delete"><%= button_to "✕", food_path(id: food.id), method: :delete, class: 'btn-circle' %></td>
                 </tr>
                 <tr class="spacer"></tr>
             <% end %>
+            </table>
         <% end %>
     </div>
 </section>

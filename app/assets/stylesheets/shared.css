@@ -1,0 +1,96 @@
+* {
+    font-family: 'Arial', sans-serif;
+    --clr-navy-blue: #10174C;
+    --clr-blue: #283593;
+    --clr-turquoise: #03DAC5;
+    --clr-red: #E91E63;
+    --clr-yellow: #F6BE1A;
+    --clr-light-yellow: #FCE68D;
+    --clr-grey: #e8e8e8;
+    --clr-text: #212121;
+}
+
+/* Containers */
+.card {
+    color: var(--clr-text);
+    padding: 20px; /* keep this the same as (-) margin of .card-header */
+    margin: 20px 0;
+    box-shadow: 0 9px 18px rgba(0,0,0,0.30);
+    border-radius: 4px;
+    width: 100%;
+}
+
+.card-header {
+    margin: -20px -20px 10px -20px; /* HERE: keep same as .card padding */
+    padding: 20px;
+    color: white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.notice, .alert {
+    z-index: 2;
+    position: absolute;
+    width: 400px;
+    padding: 20px;
+    border-radius: 4px;
+    color: white;
+    position: fixed;    /* Sticks to */
+    bottom: 5px;          /* bottom of the window */
+    left: 5px;
+}
+
+.alert, .notice {
+    background: var(--clr-navy-blue);
+    color: white;
+}
+
+.alert .close-btn, .notice .close-btn {
+    float: right;
+    cursor: pointer;
+}
+
+/* Input Elements */
+.btn {
+    border: none;
+    text-align: center;
+    min-height: 30px;
+    min-width: 75px;
+    border-radius: 500px;
+    color: white;
+    background-color: var(--clr-red);
+}
+
+.btn-circle {
+    border-radius: 100%;
+    width: 50px !important; /* Blocks other input height/width */
+    height: 50px !important; /* Blocks other input height/width */
+    border: none;
+}
+
+input:not([type='checkbox']) {
+    text-align: center;
+    height: 35px;
+    font-size: 1rem;
+    border-radius: 500px;
+}
+
+input:focus, textarea:focus { /* gets rid of blue outline on input elements */
+    outline: none;
+}
+
+/* Text */
+.text-centered {
+    text-align: center;
+}
+
+.clr-white {
+    color: white !important;
+}
+
+/* Generic */
+.spacer {
+    height: 10px;
+}
+
+

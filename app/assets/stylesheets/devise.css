@@ -1,0 +1,31 @@
+/* Devise Layout  */
+body.devise {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    align-items: center;
+    background: var(--clr-navy-blue);
+}
+
+form.sign-in {
+    width: 100%;
+}
+
+.view-container input {
+    margin: 10px 0;
+    width: 100%;
+    border: none;
+}
+
+.view-container input[type='submit'] {
+    background-color: var(--clr-red);
+    color: white;
+    cursor: pointer;
+}

@@ -15,47 +15,18 @@
  */
  /* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
 
-* {
-    color: #212121;
-    font-family: 'Arial', sans-serif;
-    --clr-primary: #6200EE;
-    --clr-primary-400: #9449ff;
-    --clr-secondary: #03DAC5;
-}
-
 body {
-    background-color: #f7f7f7;
+    margin: 0 0 75px 0;
 }
 
- .card {
-    padding: 20px; /* padding 'linked' to (-) margin of .card-header */
-    margin: 20px 0;
-    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2);
-    border-radius: 4px;
+#sticky-footer {
+    position: absolute;
     width: 100%;
-}
-
-.card-header {
-    margin: -20px -20px 10px -20px;
     padding: 20px;
+    background: var(--clr-navy-blue);
     color: white;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    background-color: var(--clr-primary);
+    position: fixed;    /* Sticks to */
+    bottom: 0;          /* bottom of the window */
+    left: 0;
 }
 
-.btn {
-    text-align: center;
-    min-width: 75px;
-    border-radius: 150px;
-    color: white;
-    background-color: var(--clr-secondary);
-}
-
-.text-centered {
-    text-align: center;
-}
-
-.spacer {
-    height: 10px;
-}

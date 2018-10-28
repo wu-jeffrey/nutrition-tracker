@@ -19,4 +19,12 @@ module HomeHelper
     def total_fat(foods)
         foods.inject(0) { |sum,food| sum + food.fat }
     end
+
+    def calories_left(foods, goal)
+        goal - total_calories(foods)
+    end
+
+    def titleize(str)
+        str.split(" ").map{|word| word.capitalize}.join(" ")
+    end
 end
