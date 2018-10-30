@@ -21,9 +21,8 @@
     <div class="input">
       <%= form.number_field :fat, min: '0', max: '999', placeholder: 'Fats'  %>
     </div>
-
-    
   </div>
+  <%= form.hidden_field :user_id, :value => current_user.id %>
   <%= form.submit :+, id: 'save-btn', class: 'btn-circle' %> 
   
 <% end %>
