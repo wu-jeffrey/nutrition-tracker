@@ -1,0 +1,45 @@
+/* Settings collapsible panel */
+$settings-banner-height: 150px;
+
+#settings-banner {
+    position: absolute;
+    width: 100%;
+    height: $settings-banner-height;
+    top: 0;
+    background-size: cover;
+    background-position: 75% 50%;
+    background-image: url(asset_path('settings-banner.jpg'));
+    // background-color: var(--clr-navy-blue);
+    transition: top 0.15s ease-in-out;
+}
+
+.collapsed {
+    top: calc(100vh - 40px);
+    transition: top 0.15s ease-in-out;
+
+    #profile-btn:hover {
+        box-shadow: 0 0 6px 6px rgba(233,30,99,0.2);
+    }
+}
+
+.opened {
+    top: $settings-banner-height;
+    transition: top 0.15s ease-in-out;
+    
+    #settings-banner {
+        top: -$settings-banner-height;
+        transition: top 0.15s ease-in-out;
+    }
+
+    #profile-btn {
+        background-image: url(asset_path('ic-close-button.svg')); 
+        background-color: var(--clr-red);
+        transform: translate(50%, -50%) rotate(450deg);
+        background-size: 15px;
+        transition: transform 0.15s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    #profile-btn:hover {
+        box-shadow: 0 0 6px 6px rgba(233,30,99,0.2);
+    }
+}

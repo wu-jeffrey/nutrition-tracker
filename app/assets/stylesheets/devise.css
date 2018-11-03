@@ -16,6 +16,19 @@ body.devise {
     background: var(--clr-navy-blue);
 }
 
+.devise .icon {
+    background-image: url('ic-fork-knife.svg'); 
+    background-color: var(--clr-red);
+    padding: 20px;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    border-radius: 100%;
+}
+
 form.sign-in {
     width: 100%;
 }

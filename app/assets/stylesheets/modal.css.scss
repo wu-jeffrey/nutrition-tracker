@@ -1,0 +1,38 @@
+/* Modal */
+#modal {
+    .click-through {
+        pointer-events: none;
+    }
+
+    #modal-backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 998;
+    }
+
+    #modal-content {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        margin-left: calc((100vw - 450px)/2);
+        background-color: white;
+        width: 450px;
+        height: 600px;
+        z-index: 999;
+    }
+
+    #modal-close {
+        background-color: var(--clr-turquoise);
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

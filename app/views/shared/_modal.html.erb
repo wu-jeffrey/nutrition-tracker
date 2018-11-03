@@ -1,0 +1,11 @@
+<div id="modal" class="hidden"> <!-- change hidden to click through and change home.js to reenable modal -->
+    <div id="modal-backdrop"></div>
+    <div id="modal-content" class="card">
+        <%= button_tag '✕', 
+            type: 'button', 
+            onclick: '$("#modal").fadeOut("fast");
+                      $("#modal").addClass("click-through");', 
+            id: 'modal-close',
+            class: 'btn-circle' %>
+    </div>
+<div>

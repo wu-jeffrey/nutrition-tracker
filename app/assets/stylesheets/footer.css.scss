@@ -1,0 +1,33 @@
+@import "settings";
+@import "collapse";
+
+#sticky-footer {
+    position: absolute;
+    width: 100%;
+    background: var(--clr-blue);
+    color: white;
+    position: fixed;    /* Sticks to */
+    bottom: 0;          /* bottom of the window */
+    left: 0;
+}
+
+.footer-content {
+    position: relative;
+    padding: 20px;
+}
+
+#profile-btn {
+    position: absolute;
+    background-color: var(--clr-red);
+    background-image: url(asset_path('ic-profile.svg')); 
+    background-size: 26px 26px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    right: 50vw;
+    height: 100%;
+    transform: translate(50%, -50%);
+    top: 0;
+    transition: transform 0.15s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 8px 3px rgba(0,0,0,0.2);
+}
+

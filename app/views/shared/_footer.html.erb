@@ -1,0 +1,18 @@
+<footer id="sticky-footer" class="collapsed">
+    <div id="settings-banner" class="hidden"></div>
+    <div class="footer-content">
+        <button id="profile-btn" class="btn-circle"></button>
+    </div> 
+    <div id="settings-content" class="hidden">
+        <div class="icon-wrapper">
+            <div class="icon"></div>
+            <h1>Your Profile</h1>
+        </div>
+        <div class="row">Calories</div>
+        <div class="row">Protein</div>
+        <div class="row">Carbohydrates</div>
+        <div class="row">Fats</div>
+        <%= button_to('Logout', destroy_user_session_path, method: :delete, class: 'btn') %>
+
+    </div>
+</footer>
