@@ -4,11 +4,9 @@
         <button id="profile-btn" class="btn-circle"></button>
     </div> 
     <div id="settings-content" class="hidden">
-        <h1>Your Profile</h1>
-        <div class="row">Calories</div>
-        <div class="row">Protein</div>
-        <div class="row">Carbohydrates</div>
-        <div class="row">Fats</div>
+        <h1>Your Goals</h1>
+
+        <%= render "goals/form" %> <%# try out render partial here%>
         <%= button_to('Logout', destroy_user_session_path, method: :delete, class: 'btn') %>
 
     </div>

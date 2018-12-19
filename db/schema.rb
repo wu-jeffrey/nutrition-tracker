@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181030015952) do
+ActiveRecord::Schema.define(version: 20181103224827) do
 
   create_table "foods", force: true do |t|
     t.string   "name"
+    t.integer  "cal",           default: 0, null: false
+    t.integer  "protein",       default: 0, null: false
+    t.integer  "carbohydrates", default: 0, null: false
+    t.integer  "fat",           default: 0, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "foods", ["user_id"], name: "index_user_id", using: :btree
+
+  create_table "goals", force: true do |t|
     t.integer  "cal"
     t.integer  "protein"
     t.integer  "carbohydrates"
@@ -24,7 +36,7 @@ ActiveRecord::Schema.define(version: 20181030015952) do
     t.integer  "user_id"
   end
 
-  add_index "foods", ["user_id"], name: "index_user_id", using: :btree
+  add_index "goals", ["user_id"], name: "index_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name",                   default: "", null: false

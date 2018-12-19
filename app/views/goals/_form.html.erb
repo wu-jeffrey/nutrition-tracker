@@ -1,0 +1,21 @@
+<%= form_for :goal, url: {action: 'create', controller: 'goals'}, :html=>{:class=> "goal"} do |form| %>
+
+  <div class="input">
+    <%= form.number_field :cal, min: '0', placeholder: 'Calories' %>
+  </div>
+
+  <div class="input">
+    <%= form.number_field :protein, min: '0', max: '999', placeholder: 'Protein' %>
+  </div>
+
+  <div class="input">
+    <%= form.number_field :carbohydrates, min: '0', max: '999', placeholder: 'Carbs' %>
+  </div>
+
+  <div class="input">
+    <%= form.number_field :fat, min: '0', max: '999', placeholder: 'Fats'  %>
+  </div>
+  <%= form.hidden_field :user_id, :value => current_user.id %>
+  <%= form.submit :+, id: 'add-btn', class: 'btn-circle' %> 
+  
+<% end %>
