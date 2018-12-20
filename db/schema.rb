@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(version: 20181103224827) do
   add_index "foods", ["user_id"], name: "index_user_id", using: :btree
 
   create_table "goals", force: true do |t|
-    t.integer  "cal"
-    t.integer  "protein"
-    t.integer  "carbohydrates"
-    t.integer  "fat"
+    t.integer  "cal",           default: 0, null: false
+    t.integer  "protein",       default: 0, null: false
+    t.integer  "carbohydrates", default: 0, null: false
+    t.integer  "fat",           default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"

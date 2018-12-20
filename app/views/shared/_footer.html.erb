@@ -2,12 +2,10 @@
     <div id="settings-banner" class="hidden"></div>
     <div class="footer-content">
         <button id="profile-btn" class="btn-circle"></button>
+        <%= button_to('Logout', destroy_user_session_path, method: :delete, class: 'btn', id: 'logout-btn') %>
     </div> 
     <div id="settings-content" class="hidden">
-        <h1>Your Goals</h1>
-
+        <h3>Your Goals</h3>
         <%= render "goals/form" %> <%# try out render partial here%>
-        <%= button_to('Logout', destroy_user_session_path, method: :delete, class: 'btn') %>
-
     </div>
 </footer>

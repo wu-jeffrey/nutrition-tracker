@@ -1,14 +1,14 @@
 <section id="home">
     <div class="card summary">
         <div class="card-header">
-            <span>Protein <%= total_protein(@foods) %> g</span>
-            <span>Carbohydrates <%= total_carbohydrates(@foods) %> g</span>
-            <span>Fats <%= total_fat(@foods) %> g</span>
-        </div>
+            <span>Protein <%= format_protein(@foods, @goal) %> (g)</span>
+            <span>Carbohydrates <%= format_carbs(@foods, @goal) %> (g)</span>
+            <span>Fats <%= format_fat(@foods, @goal) %> (g)</span>
+        </div>        
         <div class="spacer"></div>
         <div class="card-body">
             <span>Calories <%= total_calories(@foods) %> cal</span>
-            <span>Calories Left <%= calories_left(@foods, 2400) %> cal</span>
+            <span><%= calories_left(@foods, @goal) %> Calories Left </span>
         </div>
     </div>
 

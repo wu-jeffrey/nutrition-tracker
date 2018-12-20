@@ -48,10 +48,4 @@ form.food {
         box-shadow: 0 0 8px 6px rgba(233,30,99,0.2);
         cursor: pointer;
     }
-    // Remove arrows on number input
-    input[type=number]::-webkit-inner-spin-button, 
-    input[type=number]::-webkit-outer-spin-button { 
-        -webkit-appearance: none; 
-        margin: 0; 
-    }
 }

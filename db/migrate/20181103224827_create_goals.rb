@@ -1,10 +1,10 @@
 class CreateGoals < ActiveRecord::Migration
   def change
     create_table :goals do |t|
-      t.integer :cal
-      t.integer :protein
-      t.integer :carbohydrates
-      t.integer :fat
+      t.integer :cal, :default => 0, :null => false
+      t.integer :protein, :default => 0, :null => false
+      t.integer :carbohydrates, :default => 0, :null => false
+      t.integer :fat, :default => 0, :null => false
 
       t.timestamps
     end

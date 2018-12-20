@@ -9,20 +9,26 @@ module HomeHelper
         foods.inject(0) { |sum,food| sum + food.cal }
     end
 
-    def total_protein(foods)
-        foods.inject(0) { |sum,food| sum + food.protein }
+    def format_protein(foods, goal)
+        "#{foods.inject(0) { |sum,food| sum + food.protein }}/#{goal.protein}"
     end
 
-    def total_carbohydrates(foods)
-        foods.inject(0) { |sum,food| sum + food.carbohydrates }
+    def format_carbs(foods, goal)
+        "#{foods.inject(0) { |sum,food| sum + food.carbohydrates }}/#{goal.carbohydrates}"
     end
 
-    def total_fat(foods)
-        foods.inject(0) { |sum,food| sum + food.fat }
+    def format_fat(foods, goal)
+        "#{foods.inject(0) { |sum,food| sum + food.fat }}/#{goal.fat}"
     end
 
     def calories_left(foods, goal)
-        goal - total_calories(foods)
+        calories = goal.cal || 2400
+        calories - total_calories(foods)
+    end
+
+    def protein_left(foods, goal)
+      calories = goal.cal || 2400
+      calories - total_calories(foods)
     end
 
     def titleize(str)

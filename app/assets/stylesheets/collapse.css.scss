@@ -14,7 +14,7 @@ $settings-banner-height: 150px;
 }
 
 .collapsed {
-    top: calc(100vh - 40px);
+    top: calc(100vh - 70px); /* <- footer height */
     transition: top 0.15s ease-in-out;
 
     #profile-btn:hover {

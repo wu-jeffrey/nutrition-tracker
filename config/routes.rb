@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  resources :goals
   devise_for :users
   match ':controller(/:action(:/id))', :via => [:get, :post]
-
+  
   resource :food
+  resources :users do
+    resources :goals
+  end
 
   root 'home#index'
 

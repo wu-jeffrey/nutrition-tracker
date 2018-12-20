@@ -10,12 +10,19 @@
     align-items: center;
 
     .summary {
-        .card-header, .card-body  {
+        .card-header, .card-body, .card-banner  {
             display: flex;
             justify-content: space-around;
         }
         .card-header {
             background-color: var(--clr-blue);
+        }
+        .card-banner {
+            color: white;
+            background-color: var(--clr-red);
+            /* Hacky :( */
+            margin: -20px -20px 0 -20px;
+            padding: 15px;
         }
     }
 

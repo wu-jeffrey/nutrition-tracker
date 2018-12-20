@@ -21,3 +21,10 @@
 body {
     margin: 0 0 75px 0;
 }
+
+/* Remove arrows on number input */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}

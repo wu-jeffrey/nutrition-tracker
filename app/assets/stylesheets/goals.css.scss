@@ -3,5 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 form.goal {
-  
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  input {
+    border: none;
+  }
+
+  input:not([type='submit']) {
+    margin-top: 0 !important;
+    min-width: 320px;
+  }
+
+  #save-btn {
+    background-color: var(--clr-turquoise);
+    color: white;
+    margin-top: 20px;
+  }
 }
