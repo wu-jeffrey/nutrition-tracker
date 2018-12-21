@@ -50,6 +50,7 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
   database: nutrition-tracker_production
   username: nutrition-tracker
   password: <%= ENV['NUTRITION-TRACKER_DATABASE_PASSWORD'] %>
