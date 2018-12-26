@@ -6,9 +6,8 @@ Macronutrient and calorie tracker to help me get familiar with Rails
 * Ruby 2.3.3
 * Rails 4
 
-
-> NOTE: Steps below were done on OSX
 ## Setup
+> NOTE: Steps below were done on OSX
 1. Clone repo
 2. Install Dependencies 
   `bundle install`
