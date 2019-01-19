@@ -13,13 +13,17 @@
       <%= render "devise/shared/links" %>
     </div>
 
-    <div class="notice">
-      <%= notice %> <span class="close-btn">✕</span>
-    </div>
+    <% if alert %>
+      <div class="notice">
+        <%= notice %>
+      </div>
+    <% end %>
     
-    <div class="alert">
-      <%= alert %> <span class="close-btn">✕</span>
-    </div>
+    <% if alert %>
+      <div class="alert">
+        <%= alert %>
+      </div>
+    <% end %>
   </body>
 
 </html>
