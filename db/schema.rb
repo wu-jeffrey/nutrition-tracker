@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20181103224827) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "foods", force: true do |t|
     t.string   "name"
     t.integer  "cal",           default: 0, null: false
@@ -36,7 +39,7 @@ ActiveRecord::Schema.define(version: 20181103224827) do
     t.integer  "user_id"
   end
 
-  add_index "goals", ["user_id"], name: "index_user_id", using: :btree
+  add_index "goals", ["user_id"], name: "index_user_id_on_goals", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name",                   default: "", null: false
