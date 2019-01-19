@@ -46,11 +46,6 @@
     color: white;
 }
 
-.alert .close-btn, .notice .close-btn {
-    float: right;
-    cursor: pointer;
-}
-
 /* Input Elements */
 .btn {
     text-align: center;
