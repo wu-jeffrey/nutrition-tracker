@@ -1,0 +1,605 @@
+/* Settings collapsible panel */
+/* line 5, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+#settings-banner {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  top: 0;
+  background-size: cover;
+  background-position: 75% 50%;
+  background-image: url("/assets/settings-banner.jpg");
+  transition: top 0.15s ease-in-out;
+}
+
+/* line 17, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+.collapsed {
+  top: calc(100vh - 70px);
+  /* <- footer height */
+  transition: top 0.15s ease-in-out;
+}
+/* line 21, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+.collapsed #profile-btn:hover {
+  box-shadow: 0 0 6px 6px rgba(233, 30, 99, 0.2);
+}
+
+/* line 26, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+.opened {
+  top: 150px;
+  transition: top 0.15s ease-in-out;
+}
+/* line 30, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+.opened #settings-banner {
+  top: -150px;
+  transition: top 0.15s ease-in-out;
+}
+/* line 35, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+.opened #profile-btn {
+  background-image: url("/assets/ic-close-button.svg");
+  background-color: var(--clr-red);
+  transform: translate(50%, -50%) rotate(450deg);
+  background-size: 15px;
+  transition: transform 0.15s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+/* line 43, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+.opened #profile-btn:hover {
+  box-shadow: 0 0 6px 6px rgba(233, 30, 99, 0.2);
+}
+/* Devise Layout  */
+
+body.devise {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-container {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    align-items: center;
+    background: var(--clr-navy-blue);
+}
+
+.devise .icon {
+    background-image: url('ic-fork-knife.svg'); 
+    background-color: var(--clr-red);
+    padding: 20px;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    border-radius: 100%;
+}
+
+form.sign-in {
+    width: 100%;
+}
+
+.view-container input {
+    margin: 10px 0;
+    width: 100%;
+    border: none;
+}
+
+.view-container input[type=submit] {
+    background-color: var(--clr-red);
+    color: white;
+    cursor: pointer;
+}
+/* line 5, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/foods.css.scss */
+form.food {
+  text-align: center;
+}
+/* line 8, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/foods.css.scss */
+form.food .row {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+/* line 14, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/foods.css.scss */
+form.food .input {
+  width: 100%;
+}
+/* line 17, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/foods.css.scss */
+form.food .input input {
+  width: 90%;
+}
+/* line 22, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/foods.css.scss */
+form.food input {
+  background-color: var(--clr-grey);
+  transition: box-shadow 0.3s ease-in-out;
+  height: 35px;
+  font-size: 1rem;
+  border: none;
+}
+/* line 30, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/foods.css.scss */
+form.food input:focus, form.food textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+}
+/* line 35, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/foods.css.scss */
+form.food #add-btn {
+  position: absolute;
+  right: 0;
+  bottom: 40%;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+  background-color: var(--clr-red);
+  color: white;
+  font-size: 30px;
+  transform: translate(50%, 50%);
+}
+/* line 47, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/foods.css.scss */
+form.food #add-btn:hover, form.food #add-btn:focus {
+  box-shadow: 0 0 8px 6px rgba(233, 30, 99, 0.2);
+  cursor: pointer;
+}
+/* line 1, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/settings.css.scss */
+#settings-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+/* line 8, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/settings.css.scss */
+#settings-content .row {
+  padding: 20px;
+}
+
+/* Settings collapsible panel */
+/* line 4, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+#settings-banner {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  top: 0;
+  background-size: cover;
+  background-position: 75% 50%;
+  background-image: url("/assets/settings-banner.jpg");
+  transition: top 0.15s ease-in-out;
+}
+
+/* line 16, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+.collapsed {
+  top: calc(100vh - 70px);
+  /* <- footer height */
+  transition: top 0.15s ease-in-out;
+}
+/* line 20, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+.collapsed #profile-btn:hover {
+  box-shadow: 0 0 6px 6px rgba(233, 30, 99, 0.2);
+}
+
+/* line 25, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+.opened {
+  top: 150px;
+  transition: top 0.15s ease-in-out;
+}
+/* line 29, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+.opened #settings-banner {
+  top: -150px;
+  transition: top 0.15s ease-in-out;
+}
+/* line 34, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+.opened #profile-btn {
+  background-image: url("/assets/ic-close-button.svg");
+  background-color: var(--clr-red);
+  transform: translate(50%, -50%) rotate(450deg);
+  background-size: 15px;
+  transition: transform 0.15s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+/* line 42, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/collapse.css.scss */
+.opened #profile-btn:hover {
+  box-shadow: 0 0 6px 6px rgba(233, 30, 99, 0.2);
+}
+
+/* line 4, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/footer.css.scss */
+#sticky-footer {
+  position: absolute;
+  width: 100%;
+  background: var(--clr-blue);
+  color: white;
+  position: fixed;
+  /* Sticks to */
+  bottom: 0;
+  /* bottom of the window */
+  left: 0;
+}
+
+/* line 14, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/footer.css.scss */
+.footer-content {
+  position: relative;
+  padding: 20px;
+}
+
+/* line 19, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/footer.css.scss */
+#profile-btn {
+  position: absolute;
+  background-color: var(--clr-red);
+  background-image: url("/assets/ic-profile.svg");
+  background-size: 26px 26px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  right: 50vw;
+  height: 100%;
+  transform: translate(50%, -50%);
+  top: 0;
+  transition: transform 0.15s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* line 34, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/footer.css.scss */
+#logout-btn {
+  position: absolute;
+  background-color: transparent;
+  transition: background-color 0.15s ease-in-out;
+}
+/* line 39, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/footer.css.scss */
+#logout-btn:hover, #logout-btn:focus {
+  background-color: var(--clr-red);
+}
+/* line 7, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/goals.css.scss */
+form.goal h4 {
+  margin-bottom: 10px;
+}
+/* line 11, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/goals.css.scss */
+form.goal input {
+  border: none;
+}
+/* line 15, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/goals.css.scss */
+form.goal input:not([type='submit']) {
+  margin-top: 0 !important;
+  min-width: 320px;
+}
+/* line 20, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/goals.css.scss */
+form.goal #save-btn {
+  background-color: var(--clr-turquoise);
+  color: white;
+  margin-top: 20px;
+}
+/* line 5, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home {
+  margin: 0 auto;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 13, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .summary .card-header, #home .summary .card-body, #home .summary .card-banner {
+  display: flex;
+  justify-content: space-around;
+}
+/* line 17, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .summary .card-header {
+  background-color: var(--clr-blue);
+}
+/* line 20, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .summary .card-banner {
+  color: white;
+  background-color: var(--clr-red);
+  /* Hacky :( */
+  margin: -20px -20px 0 -20px;
+  padding: 15px;
+}
+/* line 29, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .add {
+  position: relative;
+}
+/* line 31, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .add .card-header {
+  background-color: var(--clr-red);
+}
+/* line 36, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .list {
+  display: block;
+  width: 100%;
+}
+/* line 40, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .list .food-chip {
+  background-color: var(--clr-grey);
+}
+/* line 44, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .list table {
+  width: 100%;
+  border-spacing: 0;
+}
+/* line 49, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .list tr {
+  margin-bottom: 10px;
+}
+/* line 53, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .list td {
+  padding: 20px;
+}
+/* line 57, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .list tr > td:first-child {
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+}
+/* line 62, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .list tr > td:not(:first-child) {
+  /* Cals, protein, carbs, fats, and not name */
+  text-align: center;
+}
+/* line 66, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .list td.delete {
+  padding: 0;
+  width: 55px !important;
+  border-top-right-radius: 500px;
+  border-bottom-right-radius: 500px;
+}
+/* line 71, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .list td.delete input {
+  background-color: var(--clr-grey);
+  color: white;
+}
+/* line 76, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home .list td.delete input:hover {
+  color: white;
+  cursor: pointer;
+  background-color: var(--clr-red);
+  box-shadow: 0 0 8px 3px rgba(233, 30, 99, 0.2);
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+/* line 86, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/home.css.scss */
+#home #hungry {
+  display: block;
+  height: 75px;
+  width: 75px;
+  margin: 0 auto;
+}
+/* Modal */
+/* line 4, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/modal.css.scss */
+#modal .click-through {
+  pointer-events: none;
+}
+/* line 8, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/modal.css.scss */
+#modal #modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 998;
+}
+/* line 18, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/modal.css.scss */
+#modal #modal-content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  margin-top: 50px;
+  margin-left: calc((100vw - 450px)/2);
+  background-color: white;
+  width: 450px;
+  height: 600px;
+  z-index: 999;
+}
+/* line 32, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/modal.css.scss */
+#modal #modal-close {
+  background-color: var(--clr-turquoise);
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 1, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/settings.css.scss */
+#settings-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+/* line 8, /mnt/c/Users/Jeff/Documents/projects/nutrition-tracker/app/assets/stylesheets/settings.css.scss */
+#settings-content .row {
+  padding: 20px;
+}
+* {
+    font-family: 'Arial', sans-serif;
+    --clr-navy-blue: #10174C;
+    --clr-blue: #283593;
+    --clr-turquoise: #03DAC5;
+    --clr-red: #E91E63;
+    --clr-yellow: #F6BE1A;
+    --clr-light-yellow: #FCE68D;
+    --clr-grey: #e8e8e8;
+    --clr-text: #212121;
+    
+    --card-padding: 20px;
+}
+
+/* Containers */
+.card {
+    padding: var(--card-padding); 
+    margin: 20px 0;
+    box-shadow: 0 9px 18px rgba(0,0,0,0.30);
+    border-radius: 4px;
+    width: 100%;
+}
+
+.card-header {
+    margin: calc(-1*var(--card-padding)) calc(-1*var(--card-padding)) 10px calc(-1*var(--card-padding));
+    padding: 20px;
+    color: white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.notice, .alert {
+    z-index: 2;
+    position: absolute;
+    width: 400px;
+    padding: 20px;
+    border-radius: 4px;
+    color: white;
+    position: fixed;    /* Sticks to */
+    bottom: 5px;        /* bottom of the window */
+    left: 5px;
+}
+
+.alert, .notice {
+    background: var(--clr-navy-blue);
+    color: white;
+}
+
+/* Input Elements */
+.btn {
+    text-align: center;
+    border: none;
+    text-align: center;
+    min-height: 30px;
+    line-height: 30px;
+    min-width: 75px;
+    border-radius: 500px;
+    color: white;
+    background-color: var(--clr-red);
+    cursor: pointer;
+}
+
+.btn-circle {
+    border-radius: 100%;
+    width: 50px !important; /* Blocks other input height/width */
+    height: 50px !important; /* Blocks other input height/width */
+    border: none;
+    cursor: pointer;
+}
+
+.btn-circle {
+    cursor: pointer;
+}
+
+input:not([type=checkbox]) {
+    text-align: center;
+    height: 35px;
+    font-size: 1rem;
+    border-radius: 500px;
+}
+
+/* slider */
+    .switch {
+        position: relative;
+        display: flex;
+        width: 42px;
+        height: 23px;
+        margin: 10px 0px 10px 75px
+    }
+
+    input[type=checkbox] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 150px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 100%;
+      }
+
+      input:checked + .slider {
+        background-color: var(--clr-red);
+      }
+      
+      input:focus + .slider {
+        box-shadow: 0 0 1px var(--clr-red);
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(18px);
+        -ms-transform: translateX(18px);
+        transform: translateX(18px);
+      }
+
+      .switch .label {
+          line-height: 23px;
+          display: inline;
+          min-width: 110px;
+          margin-left: 50px;
+      }
+
+input:focus, textarea:focus { /* gets rid of blue outline on input elements */
+    outline: none;
+}
+
+button {
+    outline: none;
+}
+
+/* Text */
+.text-centered {
+    text-align: center;
+}
+
+.clr-white {
+    color: white !important;
+}
+
+/* Generic */
+.spacer {
+    height: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+ /* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
+
+
+@import "footer";
+@import "modal";
+
+body {
+    margin: 0 0 75px 0;
+}
+
+/* Remove arrows on number input */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
