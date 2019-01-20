@@ -1,7 +1,8 @@
 # README
 
 Macronutrient and calorie tracker to help me get familiar with Rails
-https://dashboard.heroku.com/apps/serene-retreat-25036
+---
+See here: https://serene-retreat-25036.herokuapp.com/
 
 ## Versions
 * Ruby 2.3.3
