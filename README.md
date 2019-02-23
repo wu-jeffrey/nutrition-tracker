@@ -17,7 +17,5 @@ See here: https://serene-retreat-25036.herokuapp.com/
   `rake db:create db:migrate`
 
 ## Development
-1. Start mysql
-  `mysql.server start`
-2. Start local rails server (default port 3000)
+1. Start local rails server (default port 3000)
   `rails s` (optional specify port using `-p` flag, e.g. `rails s -p 3001` will use port 3001
