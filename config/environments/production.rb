@@ -66,7 +66,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     user_name:      ENV["MAIL_USERNAME"],
     password:       ENV["MAIL_PASSWORD"],
-    domain:         'serene-retreat-25036.herokuapp.com/',
+    domain:         'gmail.com',
     address:       'smtp.gmail.com',
     port:          '587',
     authentication: :plain,
