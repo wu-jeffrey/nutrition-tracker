@@ -16,6 +16,4 @@
 /tmp
 
 # Ignore environment variables
-/config/env.yml
 /config/local_env.yml
-/config/production_env.yml
