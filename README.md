@@ -19,3 +19,6 @@ See here: https://serene-retreat-25036.herokuapp.com/
 ## Development
 1. Start local rails server (default port 3000)
   `rails s` (optional specify port using `-p` flag, e.g. `rails s -p 3001` will use port 3001
+
+## Deployment
+> See: https://dashboard.heroku.com/apps/serene-retreat-25036/deploy/heroku-git#deploy-heroku-git
