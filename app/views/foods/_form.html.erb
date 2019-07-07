@@ -5,21 +5,21 @@
       <%= form.text_field :name, placeholder: 'Name', autocomplete: 'off' %>
     </div>
     <div class="input">
-      <%= form.number_field :cal, min: '0', placeholder: 'Calories' %>
+      <%= form.text_field :cal, min: '0', placeholder: 'Calories' %>
     </div>
   </div>
 
   <div class="row">
     <div class="input">
-      <%= form.number_field :protein, min: '0', max: '999', placeholder: 'Protein' %>
+      <%= form.text_field :protein, placeholder: 'Protein' %>
     </div>
 
     <div class="input">
-      <%= form.number_field :carbohydrates, min: '0', max: '999', placeholder: 'Carbs' %>
+      <%= form.text_field :carbohydrates, placeholder: 'Carbs' %>
     </div>
 
     <div class="input">
-      <%= form.number_field :fat, min: '0', max: '999', placeholder: 'Fats'  %>
+      <%= form.text_field :fat, placeholder: 'Fats'  %>
     </div>
   </div>
   <%= form.hidden_field :user_id, :value => current_user.id %>

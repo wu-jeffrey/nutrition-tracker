@@ -10,6 +10,7 @@
 
   <body>
     <%= yield %>
+    <%= render "shared/flash_snackbar"%>
   </body>
 
   <% if user_signed_in? %>

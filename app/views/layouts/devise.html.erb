@@ -13,17 +13,7 @@
       <%= render "devise/shared/links" %>
     </div>
 
-    <% if alert %>
-      <div class="notice">
-        <%= notice %>
-      </div>
-    <% end %>
-    
-    <% if alert %>
-      <div class="alert">
-        <%= alert %>
-      </div>
-    <% end %>
+    <%= render "shared/flash_snackbar"%>
   </body>
 
 </html>

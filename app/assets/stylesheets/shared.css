@@ -38,11 +38,8 @@
     color: white;
     position: fixed;    /* Sticks to */
     bottom: 5px;        /* bottom of the window */
-    left: 5px;
-}
-
-.alert, .notice {
-    background: var(--clr-navy-blue);
+    right: 5px;
+    background: var(--clr-red);
     color: white;
 }
 

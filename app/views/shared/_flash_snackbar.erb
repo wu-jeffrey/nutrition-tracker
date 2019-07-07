@@ -1,0 +1,13 @@
+<% flash.each do |key, value| %>
+  <div class="alert">
+    <% if value.kind_of?(Array) %>
+      <ul>
+        <% value.each do |val| %>
+          <li><%= val%></li>
+        <% end %>
+      </ul>  
+    <% else %>
+      <%= value %>
+    <% end %>
+  </div>
+<% end %>
