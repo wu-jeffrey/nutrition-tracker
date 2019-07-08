@@ -21,4 +21,8 @@ See here: https://serene-retreat-25036.herokuapp.com/
   `rails s` (optional specify port using `-p` flag, e.g. `rails s -p 3001` will use port 3001
 
 ## Deployment
-> See: https://dashboard.heroku.com/apps/serene-retreat-25036/deploy/heroku-git#deploy-heroku-git
+1. Install Heroku-cli and login
+2. Add heroku remote to repo 
+   `heroku git:remote -a serene-retreat-25036`
+3. Deploy changes
+   'git push heroku master`
