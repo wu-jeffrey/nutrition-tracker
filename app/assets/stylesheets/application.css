@@ -15,8 +15,8 @@
  */
  /* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
 
-@import "footer";
-@import "modal";
+@import url("footer.css.scss");
+@import url("modal.css.scss");
 
 body {
     margin: 0 0 75px 0;
